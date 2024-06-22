@@ -1,2 +1,2 @@
-# yuda-be-service
-YUDA - Youtube Data Analytics
+# yuda-platform-be-service
+YUDA - Youtube Data Analytics Platform
