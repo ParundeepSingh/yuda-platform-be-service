@@ -1,0 +1,7 @@
+
+#Files & Folders to be ignored from getting pushed to remote repository.
+.DS_Store
+.gradle
+.idea
+bin
+build
