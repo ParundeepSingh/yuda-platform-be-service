@@ -27,5 +27,13 @@ public class AppConfigs {
     @Value("${yt.data.api.v3.channels.endpoint}")
     private String youtubeDataApiV3ChannelsEndpoint;
 
+    @Value("${yt.data.api.v3.search.endpoint}")
+    private String youtubeDataApiV3SearchEndpoint;
+
+    @Value("${yt.data.api.v3.videos.endpoint}")
+    private String youtubeDataApiV3VideosEndpoint;
+
+    @Value("${yt.data.api.v3.max.batch.size:10}")
+    private Integer youtubeDataApiV3MaxBatchSize;
 
 }
