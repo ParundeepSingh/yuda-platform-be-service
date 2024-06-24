@@ -14,13 +14,17 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.http.client.reactive.ReactorClientHttpConnector;
 import org.springframework.retry.annotation.EnableRetry;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.web.reactive.function.client.ExchangeStrategies;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.netty.http.client.HttpClient;
 
+import java.util.concurrent.Executor;
 import java.util.concurrent.TimeUnit;
 
 
+@EnableAsync
 @EnableRetry
 @Configuration
 public class ApplicationConfiguration {
@@ -34,6 +38,17 @@ public class ApplicationConfiguration {
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper;
+    }
+
+    @Bean(name = "threadPoolTaskExecutor")
+    public Executor asyncExecutor() {
+        ThreadPoolTaskExecutor executor = new ThreadPoolTaskExecutor();
+        executor.setCorePoolSize(appConfigs.getAsyncExecutorCorePoolSize());
+        executor.setMaxPoolSize(appConfigs.getAsyncExecutorMaxPoolSize());
+        executor.setQueueCapacity(appConfigs.getAsyncExecutorQueueCapacity());
+        executor.setThreadNamePrefix("AsyncThread::");
+        executor.initialize();
+        return executor;
     }
 
     @Bean("youtubeDataApiV3WebClient")

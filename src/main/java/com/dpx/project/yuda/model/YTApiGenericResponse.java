@@ -8,6 +8,10 @@ import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+
+/**
+ * Model Class for YTApiGenericResponse.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

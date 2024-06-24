@@ -36,4 +36,16 @@ public class AppConfigs {
     @Value("${yt.data.api.v3.max.batch.size:10}")
     private Integer youtubeDataApiV3MaxBatchSize;
 
+    @Value("${async.executor.core.pool.size}")
+    private Integer asyncExecutorCorePoolSize;
+
+    @Value("${async.executor.max.pool.size}")
+    private Integer asyncExecutorMaxPoolSize;
+
+    @Value("${async.executor.queue.capacity}")
+    private Integer asyncExecutorQueueCapacity;
+
+    @Value("${video.view.count.trend.records.limit:10}")
+    private Integer videoViewCountTrendRecordLimit;
+
 }

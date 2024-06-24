@@ -7,11 +7,16 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+/**
+ * Model Class for VideoDetails.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class VideoDetails {
+
+    String id;
 
     String description;
 

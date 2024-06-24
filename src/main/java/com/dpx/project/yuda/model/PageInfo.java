@@ -5,6 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * Model Class for Page Info.
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
