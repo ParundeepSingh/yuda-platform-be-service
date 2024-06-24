@@ -1,5 +1,8 @@
 ## SETUP DOCUMENTATION
 
+> [!IMPORTANT] 
+> Following are the steps that would be required to spin up the service locally.
+
 1. Ensure you have <b>JAVA 17 verion</b> installed. You can check the version by following command.
 ```
 java --version 
@@ -8,8 +11,8 @@ java --version
 ```
 git clone https://github.com/ParundeepSingh/yuda-platform-be-service.git
 ```
-4. Ensure you have remote <b>MySQL DB instance</b> or have it running locally.
-5. Import the project in any IDE.
+4. Ensure you have remote <b>MySQL DB instance</b> or have it running locally. Execute the scripts. [[ DB_SETUP.md 🔗 ]](./DB_SETUP.md)
+5. Import the project in any IDE. (IntelliJ & Eclipse preferred)
 6. Edit the application.properties. And add the following properties in that file.
 <br>Following Database configurations needs to be added.
 ```
