@@ -15,6 +15,7 @@
 
 ![YUDA - Page 2](https://github.com/ParundeepSingh/yuda-platform-be-service/assets/52928589/9d3fe684-9203-46bd-93c8-3437f5c013ee)
 
+NOTE: In project for be-service, I've not implemented the kafka consumer. Rather I've implemented the Async Controller which takes the channel Handle as request and Sends the response as SUCCESS and performs the entire process on async thread.
 
 ## ERD Diagram
 
